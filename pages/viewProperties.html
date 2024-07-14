@@ -1,0 +1,138 @@
+<DOCTYPE html> 
+<html lang="en">
+<head>
+    <title>Sodv1201 Group Project. Deepanshi, Kajal, and Kailan</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Deepanshi, Kajal, and Kailan">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+
+
+<body>
+    <div class="mainPageContent">
+        <div id="headerBar">
+            <h1>My Properties</h1>
+            <nav>
+                <ul id="pageNavigation">
+                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="innerPageContent1" id="myPropertiesDiv">
+            <div class="innerPageContent2">
+                <div class="innerPageContent3">
+                    <p>properties get dynamically placed here</p>
+                </div>
+                <div>
+                    <button class="standardButton" id="openAddPropertyDiv">Add New Property</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="innerPageContent1" >            
+            <div class="innerPageContent2" id="addNewPropertyOuterDiv">
+                <button id="cancelAddProperty">X</button>
+                <p>add property page appears here.</p>
+                <div class="innerPageContent3" id="addNewPropertyDiv">
+                    <div class="propertyFields">
+                        <label>Property Name: </label> 
+                        <input type="text" placeholder="My Art Studio" class="newPropInput" id="propertyNameInput">
+                    </div>
+                    <br>
+                    <div class="propertyFields">
+                        <label>Property Address: </label> 
+                        <input type="text" placeholder="123 Main street" class="newPropInput" id="propertyAddressInput"> 
+                    </div>
+                    <br>
+                    <div class="propertyFields">
+                        <div class="propertyFields2">
+                            <label>Square Meters: &nbsp;</label> 
+                            <input type="number" placeholder="400" id="propertAreaInput" class="numberInput"> 
+                        </div>
+                        <div class="propertyFields2">
+                            <label>Maximum Occupants: &nbsp;</label> 
+                            <input type="number" placeholder="5" id="propertyMaxOccupancyInput" class="numberInput"> 
+                        </div>  
+                    </div>
+                    <br>
+                    <div class="propertyFields">
+                        <label>Type: </label> 
+                        <input type="text" placeholder="Art studio, Recording studio etc.." class="newPropInput" id="propertyTypeInput"> 
+                    </div> 
+                    <br>    
+                    <div class="propertyFields">
+                        <label>Parking: </label>
+                        <div class="newPropInput">    
+                            <div>
+                                <input type="radio" name="parking" value="yes" id="propertyParkingYes">
+                                <label>Yes</label>
+                                <input type="radio" name="parking" value="no" id="propertyParkingNo"> 
+                                <label>No</label>
+                            </div>
+                        </div> 
+                    </div>    
+                    <br>
+                    <div class="propertyFields">
+                        <label>Public Transport: </label>
+                        <div class="newPropInput"> 
+                            <div>
+                                <input type="radio" name="transport" value="yes" id="propertyTransportYes">
+                                <label>Yes</label>
+                                <input type="radio" name="transport" value="no" id="propertyTransportNo"> 
+                                <label>No</label>
+                            </div>
+                        </div> 
+                    </div>
+                    <br>
+                    <div class="propertyFields">
+                        <label>Availabile: </label>
+                        <div class="newPropInput">
+                            <input type="radio" name="availability" value="yes" id="propertyAvailableYes">
+                            <label>Yes</label>
+                            <input type="radio" name="availability" value="no" id="propertyAvailableNo"> 
+                            <label>No</label>
+                        </div> 
+                    </div>
+                    <br>
+                    <div class="propertyFields">
+                        <label>Rental Term: </label> 
+                        <div class="newPropInput">
+                            <input type="radio" name="term" value="hourly" id="propertyTermHourly">
+                            <label>Hourly</label>
+                            <input type="radio" name="term" value="daily" id="propertyTermDaily"> 
+                            <label>Daily</label>
+                            <input type="radio" name="term" value="weekly" id="propertyTermWeekly">
+                            <label>Weekly</label>
+                            <input type="radio" name="term" value="monthly" id="propertyTermMonthly"> 
+                            <label>Monthly</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="propertyFields">
+                        <label>Price (per term): </label> 
+                        <input type="number" placeholder="295.99" class="newPropInput" id="propertyMaxOccupancyInput"> 
+                    </div>
+
+                    
+                </div>
+                <div>
+                    <button class="standardButton" id="addNewPropertyButton">Add Property</button>
+                </div>
+            </div>
+        </div>
+        <div id="footerBar">
+            <p>&copy; 2024 DKK All rights reserved!</p>
+            <p>social meda social media!</p>
+        </div> 
+    </div>
+    
+    
+
+</body>
+
+
+
+</html>
