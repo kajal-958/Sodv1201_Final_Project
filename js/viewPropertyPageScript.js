@@ -2,8 +2,12 @@
 
 // these are all inputs used for creating a new property
 let propertyNameInput = document.getElementById("propertyNameInput");
-let propertyCityInput = document.getElementById("propertyCityInput");
 let propertyAddressInput = document.getElementById("propertyAddressInput");
+let propertyCityInput = document.getElementById("propertyCityInput");
+
+// provinces is a drop down menu and I am not 100% certain that this is the best way, or correct ID location to get a value from a dropdown menu
+// -- TESTING REQUIRED HERE ***
+let propertyProvinces = document.getElementById("propertyProvinces"); // added a province input as this seemed appropriate. 
 let propertAreaInput = document.getElementById("propertAreaInput");
 let propertyTypeInput = document.getElementById("propertyTypeInput");
 let propertyMaxOccupancyInput = document.getElementById("propertyMaxOccupancyInput");
@@ -17,10 +21,9 @@ let propertyTransportNo = document.getElementById("propertyTransportNo");
 let propertyAvailableYes = document.getElementById("propertyAvailableYes");
 let propertyAvailableNo = document.getElementById("propertyAvailableNo");
 
-let propertyTermHourly = document.getElementById("propertyTermHourly");
-let propertyTermDaily = document.getElementById("propertyTermDaily");
-let propertyTermWeekly = document.getElementById("propertyTermWeekly");
-let propertyTermMonthly = document.getElementById("propertyTermMonthly");
+// rentalTerm is a drop down menu and I am not 100% certain that this is the best way, or correct ID location to get a value from a dropdown menu
+// -- TESTING REQUIRED HERE ***
+let rentalTerm = document.getElementById("rentalTerm"); // rental term drop down menu selection
 // above are the inputs for adding a new property
 
 /* when this button is pressed, it changes the display of 
