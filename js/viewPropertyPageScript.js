@@ -2,6 +2,7 @@
 
 // these are all inputs used for creating a new property
 let propertyNameInput = document.getElementById("propertyNameInput");
+let propertyCityInput = document.getElementById("propertyCityInput");
 let propertyAddressInput = document.getElementById("propertyAddressInput");
 let propertAreaInput = document.getElementById("propertAreaInput");
 let propertyTypeInput = document.getElementById("propertyTypeInput");
