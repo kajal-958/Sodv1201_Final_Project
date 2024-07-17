@@ -21,10 +21,22 @@
                 </ul>
             </nav>
         </div>
-        <div class="innerPageContent1" id="myPropertiesDiv">
+        <div class="innerPageContent1" >
             <div class="innerPageContent2">
-                <div class="innerPageContent3">
-                    <p>properties get dynamically placed here</p>
+                <div class="innerPageContent3" id="dynamicDisplayPropertiesDiv">
+                    <div>
+                        <h3>Recording Studio (type)</h3>
+                    </div>
+                    <div>
+                        <p>$500.00 - monthly</p>
+                        <p>Available Now</p>
+                    </div>
+                    <h2>Dramatic Theatres</h2>
+                    <p>123 main street</p>
+                    <p>Calgary AB</p>
+                    <p>500 sq Meters, Max Occupants: 5</p>
+                    <p>Parking: Yes</p>
+                    <p>Public Transport: Yes</p>
                 </div>
                 <div>
                     <button class="standardButton" id="openAddPropertyDiv">Add New Property</button>
@@ -38,57 +50,110 @@
                 <p>add property page appears here.</p>
                 <div class="innerPageContent3" id="addNewPropertyDiv">
                     <div class="propertyFields">
-                        <label>Property Name: </label> 
+                        <div class="propertyInputLabels">
+                            <label>Property Name: </label> 
+                        </div>
                         <input type="text" placeholder="My Art Studio" class="newPropInput" id="propertyNameInput">
                     </div>
                     <br>
                     <div class="propertyFields">
-                        <label>Property Address: </label> 
+                        <div class="propertyInputLabels">
+                            <label>Property Address: </label>
+                        </div>
                         <input type="text" placeholder="123 Main street" class="newPropInput" id="propertyAddressInput"> 
                     </div>
                     <br>
                     <div class="propertyFields">
-                        <div class="propertyFields2">
-                            <label>Square Meters: &nbsp;</label> 
-                            <input type="number" placeholder="400" id="propertAreaInput" class="numberInput"> 
+                        <div class="propertyInputLabels">
+                            <label>City: </label> 
                         </div>
-                        <div class="propertyFields2">
-                            <label>Maximum Occupants: &nbsp;</label> 
-                            <input type="number" placeholder="5" id="propertyMaxOccupancyInput" class="numberInput"> 
-                        </div>  
+                        <input type="text" placeholder="Calgary" class="newPropInput" id="propertyCityInput"> 
                     </div>
                     <br>
                     <div class="propertyFields">
-                        <label>Type: </label> 
+                        <div class="propertyInputLabels">
+                            <label for="provinces">Province: </label> 
+                        </div>
+                        <div> <!-- This needs to be in a div otherwise the dropdown box stretches for some reason-->
+                            <select name="provinces" id="propertyProvinces"> 
+                                <option value="AB">AB</option>
+                                <option value="SK">SK</option>
+                                <option value="BC">BC</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="propertyFields">
+                        <div class="propertyInputLabels">
+                            <label>Type: </label> 
+                        </div>
                         <input type="text" placeholder="Art studio, Recording studio etc.." class="newPropInput" id="propertyTypeInput"> 
-                    </div> 
-                    <br>    
-                    <div class="propertyFields">
-                        <label>Parking: </label>
-                        <div class="newPropInput">    
-                            <div>
-                                <input type="radio" name="parking" value="yes" id="propertyParkingYes">
-                                <label>Yes</label>
-                                <input type="radio" name="parking" value="no" id="propertyParkingNo"> 
-                                <label>No</label>
-                            </div>
-                        </div> 
-                    </div>    
+                    </div>
                     <br>
+
                     <div class="propertyFields">
-                        <label>Public Transport: </label>
-                        <div class="newPropInput"> 
-                            <div>
-                                <input type="radio" name="transport" value="yes" id="propertyTransportYes">
-                                <label>Yes</label>
-                                <input type="radio" name="transport" value="no" id="propertyTransportNo"> 
-                                <label>No</label>
-                            </div>
-                        </div> 
+                        <div class="propertyInputLabels">
+                            <label>Square Meters: </label> 
+                        </div>
+                        <input type="number" placeholder="400" id="propertAreaInput" class="numberInput">
                     </div>
                     <br>
                     <div class="propertyFields">
-                        <label>Availabile: </label>
+                        <div class="propertyInputLabels">
+                            <label>Maximum Occupants: </label> 
+                        </div> 
+                        <input type="number" placeholder="5" id="propertyMaxOccupancyInput" class="numberInput"> 
+                    </div>
+                    <br>
+                    <div class="propertyFields">
+                        <div class="propertyInputLabels">  
+                            <label>Parking: </label>  
+                        </div>
+                        <div>
+                            <input type="radio" name="parking" value="yes" id="propertyParkingYes">
+                            <label>Yes</label>
+                            <input type="radio" name="parking" value="no" id="propertyParkingNo"> 
+                            <label>No</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="propertyFields"> 
+                        <div class="propertyInputLabels">
+                            <label>Public Transport: </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="transport" value="yes" id="propertyTransportYes">
+                            <label>Yes</label>
+                            <input type="radio" name="transport" value="no" id="propertyTransportNo"> 
+                            <label>No</label>
+                        </div>
+                    </div> 
+                    <br>
+                    <div class="propertyFields">
+                        <div class="propertyInputLabels">
+                            <label>Price (per term): </label> 
+                        </div>
+                        <input type="number" placeholder="295.99" class="numberInput" id="propertyMaxOccupancyInput">
+                    </div>
+                    <br>
+                    <div class="propertyFields">
+                        <div class="propertyInputLabels">
+                            <label for="rentalTerm" id="rentalTerm">Rental Term: </label> 
+                        </div>    
+                        <div> <!-- This needs to be in a div otherwise the dropdown box stretches for some reason-->
+                            <select name="rentalTerm" id="rentalTerm">
+                                <option value="Hourly">Hourly</option> 
+                                <option value="Daily">Daily</option>
+                                <option value="Weekly">Weekly</option>
+                                <option value="Monthly">Monthly</option>
+                            </select>
+                        </div>                   
+                    </div>
+                    <br>
+                    <div class="propertyFields">
+                        <div class="propertyInputLabels">
+                            <label>Availabile Now: </label>
+                        </div>
                         <div class="newPropInput">
                             <input type="radio" name="availability" value="yes" id="propertyAvailableYes">
                             <label>Yes</label>
@@ -96,28 +161,8 @@
                             <label>No</label>
                         </div> 
                     </div>
-                    <br>
-                    <div class="propertyFields">
-                        <label>Rental Term: </label> 
-                        <div class="newPropInput">
-                            <input type="radio" name="term" value="hourly" id="propertyTermHourly">
-                            <label>Hourly</label>
-                            <input type="radio" name="term" value="daily" id="propertyTermDaily"> 
-                            <label>Daily</label>
-                            <input type="radio" name="term" value="weekly" id="propertyTermWeekly">
-                            <label>Weekly</label>
-                            <input type="radio" name="term" value="monthly" id="propertyTermMonthly"> 
-                            <label>Monthly</label>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="propertyFields">
-                        <label>Price (per term): </label> 
-                        <input type="number" placeholder="295.99" class="newPropInput" id="propertyMaxOccupancyInput"> 
-                    </div>
+                </div>                  
 
-                    
-                </div>
                 <div>
                     <button class="standardButton" id="addNewPropertyButton">Add Property</button>
                 </div>
