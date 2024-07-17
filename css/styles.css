@@ -179,11 +179,12 @@ li a {
 }
 
 /* these divs are selected in this way as these divs area created dynamically from their arrays */
-#dynamicDisplayPropertiesDiv div:first-child { /* this refers to the div that will display in the top right of the property display window in both the search page and view properties page */
+#dynamicDisplayPropertiesDiv div:nth-last-of-type(2) { /* this refers to the div that will display in the top right of the property display window in both the search page and view properties page */
 
     /* border: 2px solid red; */
     position: absolute;
     right: 10px;
+    top: 0px;
 }
 #dynamicDisplayPropertiesDiv div:last-of-type { /* this refers to the div that will display in the bottom right of the property display window in both the search page and view properties page */
 
@@ -196,10 +197,10 @@ li a {
 
 
 
-/* this changes the property inputs to align in neat columns instead of rows. For small screens */
+
 @media only screen and (max-width: 700px)
-{
-    .propertyFields {
+{ 
+    .propertyFields { /* this changes the property inputs to align in neat columns instead of rows. For small screens */
         flex-direction: column;
     }
     /* the input fields need to be adjusted to a large size since they will now be in a column instead of side by side */
@@ -207,8 +208,19 @@ li a {
         width: clamp(200px, 65vw, 500px);
     }
 
-    .propertyInputLabels{
+    .propertyInputLabels{ /* allow the labels more space for small screens so text doesn't wrap and cramp */
 
         width: clamp(175px, 50vw, 450px); 
+    }
+
+
+    /* the below 2 elements refer to the divs that will display in the property display window in both the search page and view properties page */
+    #dynamicDisplayPropertiesDiv div:nth-last-of-type(2) { /* this position changes allows the items to neatly align in columns for small screens */
+
+        position: static;
+    }
+    #dynamicDisplayPropertiesDiv div:last-of-type {
+    
+        position: static;
     }
 }
