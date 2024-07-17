@@ -4,7 +4,6 @@
 let propertyNameInput = document.getElementById("propertyNameInput");
 let propertyAddressInput = document.getElementById("propertyAddressInput");
 let propertyCityInput = document.getElementById("propertyCityInput");
-
 // provinces is a drop down menu and I am not 100% certain that this is the best way, or correct ID location to get a value from a dropdown menu
 // -- TESTING REQUIRED HERE ***
 let propertyProvinces = document.getElementById("propertyProvinces"); // added a province input as this seemed appropriate. 
@@ -26,6 +25,9 @@ let propertyAvailableNo = document.getElementById("propertyAvailableNo");
 let rentalTerm = document.getElementById("rentalTerm"); // rental term drop down menu selection
 // above are the inputs for adding a new property
 
+
+
+
 /* when this button is pressed, it changes the display of 
 addNewPropertyOuterDiv from none to flex */
 let openAddPropertyDiv = document.getElementById("openAddPropertyDiv");
@@ -38,3 +40,5 @@ let addNewPropertyButton = document.getElementById("addNewPropertyButton");
 let addNewPropertyOuterDiv = document.getElementById("addNewPropertyOuterDiv");
 
 
+// when adding a div to this container, add both class="innerPageContent3 dynamicallyCreatedDiv" to the new div. All other styling within the created div uses these classes as selectors 
+let propertyDynamicDisplayDiv = document.getElementById("propertyDynamicDisplayDiv");
